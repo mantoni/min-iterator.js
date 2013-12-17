@@ -1,0 +1,27 @@
+{
+  "name"            : "min-iterator",
+  "version"         : "0.1.0",
+  "description"     : "Minimal iterator API for Node.js and the browser",
+  "keywords"        : ["iterator", "node", "browser"],
+  "author"          : "Maximilian Antoni (http://maxantoni.de)",
+  "homepage"        : "https://github.com/mantoni/min-iterator.js",
+  "main"            : "./lib/iterator.js",
+  "engines"         : {
+    "node"          : ">=0.8"
+  },
+  "scripts"         : {
+    "test"          : "make test"
+  },
+  "repository"      : {
+    "type"          : "git",
+    "url"           : "https://github.com/mantoni/min-iterator.js.git"
+  },
+  "devDependencies" : {
+    "mocha"         : ">=1.14 <2",
+    "jslint"        : "~0.2.5",
+    "consolify"     : "~0.6.0",
+    "phantomic"     : "~0.2.1"
+  },
+  "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
+  "license"         : "MIT"
+}
