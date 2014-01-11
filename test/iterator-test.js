@@ -32,6 +32,14 @@ function next(arr) {
   };
 }
 
+function collect() {
+  var f = function (v) {
+    f.results.push(v);
+  };
+  f.results = [];
+  return f;
+}
+
 describe('iterator.each', function () {
 
   it('throw if given argument is not a function', function () {
@@ -44,25 +52,21 @@ describe('iterator.each', function () {
 
   it('never invokes function if next returns undefined', function () {
     var i = new Iterator();
-    var c = false;
+    var c = collect();
 
-    i.each(function () {
-      c = true;
-    });
+    i.each(c);
 
-    assert(!c);
+    assert.deepEqual(c.results, []);
   });
 
   it('invokes function with each value returned by next', function () {
     var i = new Iterator();
     i.next = next(['a', null, false, 42, 0]);
+    var c = collect();
 
-    var a = [];
-    i.each(function (v) {
-      a.push(v);
-    });
+    i.each(c);
 
-    assert.deepEqual(a, ['a', null, false, 42, 0]);
+    assert.deepEqual(c.results, ['a', null, false, 42, 0]);
   });
 
   it('uses the second argument as the scope', function () {
