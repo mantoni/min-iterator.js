@@ -4,20 +4,21 @@ PATH  := node_modules/.bin:${PATH}
 default: test phantom browser
 
 tests   = ./test/*-test.js
-html    = test/all.html
 version = $(shell node -p "require('./package.json').version")
 
 .PHONY: test
 test:
 	@jslint --color lib/*.js ${tests}
-	@mocha test
+	@mocha
 
 phantom:
-	@consolify --mocha --js ${tests} | phantomic
+	@browserify ${tests} | mocaccino --browser | phantomic
 
 browser:
-	@echo "Consolify tests > file://`pwd`/${html}"
-	@consolify --mocha -o ${html} ${tests}
+	@consolify --mocha -o test/all.html ${tests}
+
+cov:
+	@browserify -t coverify ${tests} --bare | mocaccino | node | coverify
 
 release: test phantom
 ifeq (v${version},$(shell git tag -l v${version}))
