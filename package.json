@@ -11,7 +11,7 @@
   },
   "scripts"         : {
     "start"         : "mocha --watch",
-    "test"          : "make test"
+    "test"          : "make"
   },
   "repository"      : {
     "type"          : "git",
