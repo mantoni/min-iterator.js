@@ -1,4 +1,4 @@
-# min-iterator.js
+# min-iterator.js [![Build Status](https://travis-ci.org/mantoni/min-iterator.js.png?branch=master)](https://travis-ci.org/mantoni/min-iterator.js)
 
 Minimal iterator API for Node.js and the browser.
 
