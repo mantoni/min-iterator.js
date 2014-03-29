@@ -22,7 +22,7 @@
   "devDependencies" : {
     "mocha"         : ">=1.17 <2",
     "jslint"        : "~0.3.1",
-    "mochify"       : "~0.5.3"
+    "mochify"       : "~0.6.0"
   },
   "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
   "license"         : "MIT"
