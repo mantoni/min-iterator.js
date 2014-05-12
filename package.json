@@ -10,10 +10,10 @@
     "node"          : ">=0.8"
   },
   "scripts"         : {
-    "start"         : "mochify --watch --node --cover",
+    "start"         : "mocha --watch",
     "lint"          : "jslint --color './**/*.js'",
     "test-wd"       : "mochify --wd",
-    "test"          : "npm run lint && mocha -R spec && mochify --cover"
+    "test"          : "npm run lint && mocha && mochify --cover"
   },
   "repository"      : {
     "type"          : "git",
@@ -22,7 +22,7 @@
   "devDependencies" : {
     "mocha"         : ">=1.17 <2",
     "jslint"        : "~0.3.1",
-    "mochify"       : "~0.7.0"
+    "mochify"       : "~0.8.2"
   },
   "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
   "license"         : "MIT"
