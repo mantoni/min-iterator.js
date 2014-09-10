@@ -7,11 +7,11 @@
   "homepage"        : "https://github.com/mantoni/min-iterator.js",
   "main"            : "./lib/iterator.js",
   "engines"         : {
-    "node"          : ">=0.8"
+    "node"          : ">=0.10"
   },
   "scripts"         : {
     "start"         : "mocha --watch",
-    "lint"          : "jslint --color './**/*.js'",
+    "lint"          : "jslint --color \"**/*.js\"",
     "wd"            : "mochify --wd",
     "test"          : "npm run lint && mocha && mochify --cover"
   },
@@ -20,9 +20,9 @@
     "url"           : "https://github.com/mantoni/min-iterator.js.git"
   },
   "devDependencies" : {
-    "mocha"         : ">=1.17 <2",
-    "jslint"        : "~0.3.1",
-    "mochify"       : "~0.10.0"
+    "mocha"         : "^1.21",
+    "jslint"        : "^0.6",
+    "mochify"       : "^1.0"
   },
   "files"           : ["lib", "README.md", "CHANGES.md", "LICENSE"],
   "license"         : "MIT"
