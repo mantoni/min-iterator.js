@@ -1,10 +1,10 @@
-# min-iterator.js [![Build Status](https://travis-ci.org/mantoni/min-iterator.js.png?branch=master)](https://travis-ci.org/mantoni/min-iterator.js)
+# min-iterator.js
+
+[![Build Status]](https://travis-ci.org/mantoni/min-iterator.js)
+[![SemVer]](http://semver.org)
+[![License]](https://github.com/mantoni/min-iterator.js/blob/master/LICENSE)
 
 Minimal iterator API for Node.js and the browser.
-
-Repository: <https://github.com/mantoni/min-iterator.js>
-
----
 
 ## Install with npm
 
@@ -66,3 +66,7 @@ it.each(function (v) {
 ## License
 
 MIT
+
+[Build Status]: http://img.shields.io/travis/mantoni/min-iterator.js.svg
+[SemVer]: http://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: http://img.shields.io/npm/l/min-iterator.svg
