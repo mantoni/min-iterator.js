@@ -1,6 +1,6 @@
 {
   "name"            : "min-iterator",
-  "version"         : "0.1.1",
+  "version"         : "1.0.0",
   "description"     : "Minimal iterator API for Node.js and the browser",
   "keywords"        : ["iterator", "node", "browser"],
   "author"          : "Maximilian Antoni (http://maxantoni.de)",
